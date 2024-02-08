@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.364);
+}
+
+.calculator {
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.642);
+    border-radius: 6px;
+}
+@media only screen and (max-width: 350px) {
+    .calculator {
+        width: 100%;
+        border-radius: 0;
+        height: 100vh;
+    }
+}
+
+.calculator .values {
+    color: white;
+    font-size: 17px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    user-select: none;
+}
+
+
+.calculator .values .value-1,
+.calculator .values .value-2 {
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.calculator .values .attr {
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(54, 253, 71);
+}
+
+
+.calculator .result {
+    font-size: 22px;
+    color: greenyellow;
+    height: 30px;
+    border-bottom: 1px solid greenyellow;
+    overflow: auto;
+}
+
+.calculator .btns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(80px, 1fr));
+    gap: 5px;
+    user-select: none;
+    margin-top: 55px;
+}
+
+.calculator .btns #new {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.calculator .btns #delete {
+    background-color: rgba(199, 1, 1, 0.6);
+}
+
+.calculator .btns #ec {
+    background-color: rgb(3, 146, 3);
+}
+
+.calculator .btns #delete:hover {
+    background-color: rgba(199, 1, 1, 0.69);
+}
+
+.calculator .btns #ec:hover {
+    background-color: rgb(1, 94, 1);
+}
+
+
+.calculator .btns #calc,
+.calculator .btns #plus,
+.calculator .btns #subtract,
+.calculator .btns #portion {
+    background-color: rgba(27, 160, 158, 0.479);
+}
+
+
+.calculator .btns #calc:hover,
+.calculator .btns #plus:hover,
+.calculator .btns #subtract:hover,
+.calculator .btns #portion:hover {
+    background-color: rgba(27, 160, 158, 0.811);
+}
+
+
+.calculator .btns span {
+    background-color: rgba(0, 0, 0, 0.205);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.calculator .btns span:hover {
+    background-color: rgba(0, 0, 0, 0.36);
+    font-weight: bold;
+}
+
+
+.calculator .btns #ec:hover {
+    background-color: green;
+}
+
+.calculator .btns #reset:hover {
+    background-color: rgba(222, 10, 10, 0.564);
+}
